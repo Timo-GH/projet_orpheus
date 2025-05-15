@@ -1,0 +1,27 @@
+<div id="username-form-container" class="modal d-block">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modifier votre pseudo</h5>
+      </div>
+      <div class="modal-body">
+        <form id="form-profil" method="post" data-form-type="userName">
+          <div class="mb-3">
+            <label for="new-username" class="form-label">Nouveau pseudo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="main-field"
+              name="userName"
+              data-field="userName"
+              placeholder="<%= user.userName %>"
+              required
+            />
+          </div>
+          <button type="reset" class="btn btn-danger">Annuler</button>
+          <button type="submit" class="btn btn-primary">Sauvegarder</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div id="email-form-container" class="modal d-block">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modifier votre adresse email</h5>
+      </div>
+      <div class="modal-body">
+        <form id="form-profil" method="post" data-form-type="email">
+          <div class="mb-3">
+            <label for="new-email" class="form-label">Nouvelle adresse email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="main-field"
+              name="email"
+              placeholder="exemple@mail.com"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="confirm-email" class="form-label">Confirmer l'adresse email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="confirm-field"
+              name="confirmEmail"
+              placeholder="exemple@mail.com"
+              required
+            />
+          </div>
+          <div id="error-message" class="error-message"></div>
+          <button type="reset" class="btn btn-danger">Annuler</button>
+          <button type="submit" class="btn btn-primary">Sauvegarder</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
