@@ -1,0 +1,144 @@
+h1 {
+    color: red;
+};
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+#text-top {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#main-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    padding: 0 2rem;
+    position: relative;
+    margin: auto;
+}
+
+#text-left {
+    text-align: left;
+    margin-right: 2rem;
+    flex-basis: 30%;
+}    
+
+#circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  
+  #circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #191c29;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 50%; /* Forme circulaire */
+    border: 3px solid #5ddcff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: 'BrunoAceSC', 'Arial', sans-serif;
+  }
+  
+  #circle:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+  }
+  
+  #circle:hover::before,
+  #circle:hover::after {
+    animation: none;
+    opacity: 0;
+  }
+  
+  #circle::before {
+    content: "";
+    width: 110%;
+    height: 110%;
+    border-radius: 50%; /* S'assure que le cercle reste circulaire */
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    position: absolute;
+    z-index: -1;
+    top: -5%;
+    left: -5%;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  #circle::after {
+    position: absolute;
+    content: "";
+    top: 20%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 60%; /* Ajuster la taille en fonction du cercle */
+    width: 60%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(10px);
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  
+  a {
+    color: #212534;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+  
+  #text-bottom {
+    text-align: center;
+    margin-bottom: 2rem;
+  }

@@ -1,0 +1,65 @@
+<main id="main-profil">
+    <section class="profil-container">
+        <div class="profil-grid container">
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Pseudo :</label>
+                <div class="col-sm-7">
+                    <div class="form-control-plaintext" id="current-username"><%= user.userName %></div>
+                </div>
+                <div class="col-sm-2">
+                    <button id="modify-username-btn" data-form="username" class="btn btn-success">Modifier</button>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Adresse Mail :</label>
+                <div class="col-sm-7">
+                    <div class="form-control-plaintext">
+                        <% if (!user.email) { %>
+                            <p class="text-profil">Vous n'avez pas renseigné d'adresse mail</p>
+                            
+                        <% } else { %>
+                            <%= user.email %>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <button id="modify-email-btn" data-form="email"  class="btn btn-success">Modifier</button>
+                </div>
+            </div>
+            <div class="text-profil">
+                <p>L'adresse mail est utilisée pour lorem ipsum</p>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Mot de passe :</label>
+                <div class="col-sm-7">
+                    <div class="form-control-plaintext">*******</div>
+                </div>
+                <div class="col-sm-2">
+                    <button id="modify-password-btn" data-form="password"  class="btn btn-success">Modifier</button>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Youtube :</label>
+                <div class="col-sm-7">
+                    <div class="form-control-plaintext">
+                        <% if (!user.youtube) { %>
+                            <p class="text-profil">Vous n'avez pas lié de compte Youtube</p>
+                            
+                        <% } else { %>
+                            <%= user.youtube %>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <button id="modify-youtube-btn" data-form="youtube"  class="btn btn-success">Modifier</button>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-12 text-center">
+                    <button class="btn btn-primary">Voir mon historique</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="dynamic-form-container" class="d-none"></section>
+</main>

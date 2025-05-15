@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'BrunoAceSC';
+    src: url('fonts/BrunoAceSC-Regular.ttf') format('truetype');
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#titre_orpheus {
+    font-size: 3rem;
+    text-decoration: none;
+    font-family: 'BrunoAceSC', 'Arial', sans-serif ;
+}
+
+main {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, #1a237e, #4a148c, #0d47a1, #550e07, #3e2723);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%; 
+    }
+}
+
+/* Animation Cercle */
+

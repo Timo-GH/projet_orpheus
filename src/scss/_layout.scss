@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'BrunoAceSC';
+    src: url('fonts/BrunoAceSC-Regular.ttf') format('truetype');
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    position: relative;
+    width: 100%;
+}
+
+#titre-orpheus {
+    font-size: 3rem;
+    text-decoration: none;
+    font-family: 'BrunoAceSC', 'Arial', sans-serif ;
+}
+
+.navbar {
+    ul  {
+        flex-direction: row;
+        li {
+            margin: 20px;
+        }
+    }
+    .navbar-text {
+        font-size: 1.5rem;
+    }
+} 
+
+body,
+html {
+    background-color: black;
+}
+
+
+p {
+    color: white;
+}
